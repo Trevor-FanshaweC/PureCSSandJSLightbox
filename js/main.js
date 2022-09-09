@@ -14,11 +14,12 @@
     ]
 
     function popLightbox() {
-        // debugger;
         let currentCaption = document.querySelector('.lightbox figcaption'),
             currentName = this.dataset.copyref;
 
         currentCaption.textContent = theCaptions.filter(item => item.name == currentName)[0].copy;
+
+        // could also change image sources, add anything else here
     }
 
     lbLinks.forEach(link => link.addEventListener('click', popLightbox));
